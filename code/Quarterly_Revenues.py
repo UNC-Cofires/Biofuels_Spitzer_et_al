@@ -3,6 +3,8 @@
 Created on Fri Aug 30 14:17:14 2024
 
 @author: amonkar
+
+Figure to create quarterly revenues across different pathways.
 """
 
 # Set the working directory
