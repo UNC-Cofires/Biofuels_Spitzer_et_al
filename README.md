@@ -3,8 +3,10 @@
 Study analyzing climatic drives and low frequency changes in CONUS wide inferred heating and cooling demand. 
 This is the code repository for the paper "Biofuels without the gas? An economic analysis of algae cultivation without CO2 sparging" by Hunter Spitzer, Yash Vijay Amonkar, Nazanin Nowzari, Sridhar Viamajala, Robin Gerlach and Gregory W. Characklis.
 This work has been submitted to Renewable Energy (https://www.sciencedirect.com/journal/renewable-energy) for consideration. 
-The code to replicate the plots in this study using Python code is presented in this GitHub repository.
-The actual analysis is was completed in Matlab and the entire code and the underlying data are provided in a Zenodo file. 
+The actual analysis is done in Matlab and the entire code and the underlying data are provided in a Zenodo file. 
+Given the license requirements of Matlab, the code to replicate the plots in this study using Python code (open source and accessible to anyone) is presented in this GitHub repository.
+This code utilizes the output from the Technoeconomic Anlysis- Life Cycle Analysis model to generate the plots used in the manuscript. 
+Please reach out to Hunter Spitzer (hunter@unc.edu) & Yash Amonkar (amonkar@unc.edu) for further questions.
 
 
 ### Abstract
