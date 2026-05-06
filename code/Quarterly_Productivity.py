@@ -40,13 +40,13 @@ def load_and_process_data(file_path):
     return df_melted
 
 
-df_nano = load_and_process_data('data/quarterlyprod_Nano18March.csv')
-
-
-
 def plot_quarterly_productivity(nano_file, sla04_file):
     df_nano = load_and_process_data(nano_file)
     df_sla04 = load_and_process_data(sla04_file)
+    
+    #Adjust to Daily Values
+    df_nano['Productivity'] = df_nano['Productivity']/90
+    df_sla04['Productivity'] = df_sla04['Productivity']/90
 
     fig, axes = plt.subplots(2, 2, figsize=(25, 15))
     axes = axes.flatten()
@@ -54,11 +54,11 @@ def plot_quarterly_productivity(nano_file, sla04_file):
     for i, quarter in enumerate(['Q1', 'Q2', 'Q3', 'Q4']):
         ax = axes[i]
         sns.histplot(data=df_nano[df_nano['Quarter'] == quarter], x='Productivity', 
-                     color='#ff7f0e', kde=False, ax=ax, stat='count', label='N. Oceanica',
-                     binwidth=5, alpha=0.9)
+                     color='#ff7f0e', kde=False, ax=ax, stat='count', label='N. oceanica',
+                     binwidth=0.1, alpha=0.9)
         sns.histplot(data=df_sla04[df_sla04['Quarter'] == quarter], x='Productivity', 
                      color='#1f77b4', kde=False, ax=ax, stat='count', label='SLA-04',
-                     binwidth=5, alpha=0.9)
+                     binwidth=0.1, alpha=0.9)
         
         
         # Add quarter label to upper left corner
@@ -68,7 +68,7 @@ def plot_quarterly_productivity(nano_file, sla04_file):
         
         # Set x-axis label only for bottom subplots
         if i >= 2:
-            ax.set_xlabel('Productivity (g m⁻² qtr⁻¹)', fontsize=28)
+            ax.set_xlabel('Productivity (g m⁻² day⁻¹)', fontsize=32)
         else:
             ax.set_xlabel('')
         
@@ -78,13 +78,13 @@ def plot_quarterly_productivity(nano_file, sla04_file):
         else:
             ax.set_ylabel('')
             
-        ax.set_xlim(150, 1500)
-        ax.set_ylim(0, 1750)
+        ax.set_xlim(0, 18)
+        ax.set_ylim(0, 3000)
         
         
         # Increase size of x and y axis ticks and numbers
-        ax.tick_params(axis='both', which='major', labelsize=20)
-        ax.tick_params(axis='both', which='minor', labelsize=20)
+        ax.tick_params(axis='both', which='major', labelsize=24)
+        ax.tick_params(axis='both', which='minor', labelsize=24)
         
         # Remove legend if it exists
         legend = ax.get_legend()
@@ -105,3 +105,4 @@ plot_quarterly_productivity('data/quarterlyprod_Nano18March.csv', 'data/quarterl
 
 
 
+#%% 

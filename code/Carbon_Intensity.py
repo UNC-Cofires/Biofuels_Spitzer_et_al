@@ -39,8 +39,8 @@ fig, ax = plt.subplots(figsize=(12, 9))
 bars = ax.bar(categories, values, color=['#000000','#1f77b4', '#ff7f0e', '#ffbb33', '#8e44ad'],
               edgecolor='black', linewidth=1)
 # Customize the plot
-ax.set_ylabel('grams CO2eq/MJ', fontsize=20)
-ax.set_xlabel('Pathways', fontsize=20)
+ax.set_ylabel('grams CO2eq/M-J', fontsize=24)
+ax.set_xlabel('Scenarios', fontsize=24)
 ax.set_ylim(0, 100)
 ax.tick_params(axis='both', which='major', labelsize=18)
 
