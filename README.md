@@ -1,6 +1,5 @@
 # High-Alkalinity Algal Cultivation with Direct Air Capture: An Economic Feasibility Analysis
 
-Study analyzing climatic drives and low frequency changes in CONUS wide inferred heating and cooling demand. 
 This is the code repository for the paper "High-Alkalinity Algal Cultivation with Direct Air Capture: An Economic Feasibility Analysis" by Hunter Spitzer, Yash Vijay Amonkar, Nazanin Nowzari, Sridhar Viamajala, Robin Gerlach and Gregory W. Characklis.
 This work has been submitted to Renewable Energy (https://www.sciencedirect.com/journal/renewable-energy) for consideration. 
 A preprint version of the Manuscript can be found here - https://doi.org/10.31223/X5JN32
